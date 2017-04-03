@@ -4,15 +4,18 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ViewPostPage } from '../pages/view-post/view-post';
 import { AddPostPage } from '../pages/add-post/add-post';
+import { AddCommentPage } from '../pages/add-comment/add-comment';
 import { Data } from '../providers/data';
 import { Posts } from '../providers/posts';
+import { Comments } from '../providers/comments';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ViewPostPage,
-    AddPostPage
+    AddPostPage,
+    AddCommentPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -22,8 +25,9 @@ import { Posts } from '../providers/posts';
     MyApp,
     HomePage,
     ViewPostPage,
-    AddPostPage
+    AddPostPage,
+    AddCommentPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Data, Posts]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Data, Posts, Comments]
 })
 export class AppModule {}
