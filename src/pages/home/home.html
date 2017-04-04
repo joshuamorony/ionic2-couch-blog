@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-navbar>
+<ion-header no-border>
+  <ion-navbar color="primary">
     <ion-title>
       Couch Blog
     </ion-title>
@@ -11,10 +11,14 @@
 
 <ion-content>
 
-	<ion-list>
-		<ion-item (click)="viewPost(post)" *ngFor="let post of posts">
-			{{post.title}}
-		</ion-item>
-	</ion-list>
+	<ion-card (click)="viewPost(post)" *ngFor="let post of posts">
+		<ion-card-header>
+			<img src="http://placehold.it/600x300" />
+			<h2>{{post.title}}</h2>
+		</ion-card-header>
+		<ion-card-content>
+			{{post.content}}
+		</ion-card-content>
+	</ion-card>
 
 </ion-content>

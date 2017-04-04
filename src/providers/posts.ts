@@ -81,6 +81,8 @@ export class Posts {
 
 		}
 
+		this.postSubject.next(this.posts);
+
 	}
 
 }
